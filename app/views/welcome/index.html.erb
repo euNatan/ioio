@@ -1,0 +1,122 @@
+<section id="home-slider">
+  <!--slide 1-->
+  <div style="background: url('assets/placeholders/slider_1.jpg')">
+    <div class="row">
+      <div class="small-16 columns">
+        <div class="cta-text">
+          <p> <span>New Game is Out!</span></p>
+          <p> <span>Lorem Ipsum is simply</span></p>
+          <p> <span>dummy text!</span></p><a href="#" class="button cta-button">Try the Demo! <span>for Windows &amp; MacOS</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--//slide 1-->
+  <!--slide-2-->
+  <div style="background: url('assets/placeholders/slider_1.jpg')">
+    <div class="row">
+      <div class="small-16 columns">
+        <div class="cta-text">
+          <p> <span>X Game Update!</span></p>
+          <p> <span>Lorem Ipsum is simply</span></p>
+          <p> <span>dummy text!</span></p><a href="#" class="button cta-button">Try the Demo! <span>for Windows</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--//slide-2-->
+
+</section>
+
+<div class="content-top"></div>
+
+<section id="main-content">
+  <div class="row">
+    <div class="small-16 columns">
+      <article class="about-us-summary">
+        <h2><%= @about.title %></h2>
+        <p>
+          <%= @about.description[0..600] %>...<a href="#" class="read-more">Leia mais ›</a>
+        </p>
+      </article>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-16 columns">
+      <div class="big-sep"></div>
+    </div>
+  </div>
+  <div class="row">
+
+    <div id="featured-games" class="small-16 large-9 columns">
+      <h2 class="title">Destaques</h2>
+
+      <% @article.each do |a| %>
+        <article>
+          <div class="image-container">
+            <%= image_tag a.image.medium, alt:"", class:"thumbnail"%>
+          </div>
+          <h5> <a href="#"><%= a.title %></a></h5>
+          <p><%= a.description %></p>
+        </article>
+      <% end %>
+
+    </div>
+
+
+    <aside class="small-16 large-6 columns">
+      <!--notebook-->
+      <div class="notebook">
+
+        <header><h2 class="title">Blog Notes</h2></header>
+        <div class="blog-entries notebook-pattern">
+
+          <div class="entry row large-collapse">
+            <div class="date small-3 large-2 columns">
+              <p>Sep</p><span>07</span>
+            </div>
+            <div class="article-preview small-13 large-14 columns">
+              <h6><a href="#">Lorem Ipsum is simply dummy text</a></h6>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><a href="#" class="link">Read More &rsaquo;</a>
+            </div>
+          </div><!--//entry-->
+
+          <div class="entry row large-collapse">
+            <div class="date small-3 large-2 columns">
+              <p>Sep</p><span>01</span>
+            </div>
+            <div class="article-preview small-13 large-14 columns">
+              <h6><a href="#">New Game Released</a></h6>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><a href="#" class="link">Read More &rsaquo;</a>
+            </div>
+          </div><!--//entry-->
+
+          <div class="entry row large-collapse">
+            <div class="date small-3 large-2 columns">
+              <p>Aug</p><span>25</span>
+            </div>
+            <div class="article-preview small-13 large-14 columns">
+              <h6><a href="#">Game Update Available</a></h6>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><a href="#" class="link">Read More &rsaquo;</a>
+            </div>
+          </div><!--//entry-->
+
+          <div class="entry row large-collapse">
+            <div class="date small-3 large-2 columns">
+              <p>Jul</p><span>31</span>
+            </div>
+            <div class="article-preview small-13 large-14 columns">
+              <h6><a href="#">Patch Release 1.1</a></h6>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><a href="#" class="link">Read More &rsaquo;</a>
+            </div>
+          </div><!--//entry-->
+
+        </div>
+      </div>
+      <!--//notebook-->
+
+
+    </aside>
+
+  </div>
+</section>
