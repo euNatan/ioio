@@ -8,6 +8,11 @@
 .dark-purple {
 	color: #231a1e
 }
+#item_collection_id option{
+	font-size: 16pt;
+	font-family: Luckiest Guy, cursive;
+	font-weight: 400;
+}
 
 #main-header #main-nav ul li a,
 #home-slider .cta-text p {

@@ -16,15 +16,18 @@
 </section>
 <section id="main-content">
   <div class="row">
-    <h1>Nova Conquista</h1>
-    <div id="user-widget">
-      <% if current_user %>
-        <%= image_tag current_user.image.thumb %> <strong> <%= current_user.name %></strong>!
-        <%= link_to "Sair", destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to "<i class=\"fa fa-1x fa-facebook-square\" aria-hidden=\"true\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
-      <% end %>
-    </div>
+    <h1>Nova Conquista de:
+
+      <div id="user-widget">
+        <% if current_user %>
+          <%= image_tag current_user.image.thumb %> <strong> <%= current_user.name %></strong>!
+          <%= link_to "Sair", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "<i class=\"fa fa-1x fa-facebook-square\" aria-hidden=\"true\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
+        <% end %>
+      </div>
+    </h1>
+
 
     <%= render 'form', item: @item %>
 
