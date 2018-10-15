@@ -1,29 +1,68 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+<section id="home-slider">
+  <!--slide -->
+  <% Banner.background.each do |banner| %>
+  <div class="item-slider" style="background: url('<%= banner.image.banner.url %>')">
+    <div class="row">
+      <div class="small-16 columns">
+        <div class="ad-google-item">
+          <iframe src="https://aka-cdn.adtechus.com/apps/144/Ad0St3Sz225Sq0V1Id26307216/banner.html" marginwidth="0" scrolling="no" marginheight="0" width="728" height="90" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
   </div>
+  <% end %>
+  <!--//slide -->
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+</section>
+<section id="main-content">
+  <div class="row">
+    <h1>Cadastre-se</h1>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:multipart => true}) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :image %><br />
+        <%= f.file_field :image, autofocus: true %>
+        <%= f.hidden_field :image_cache %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Cadastrar", class:"item-button" %>
+      </div>
+      <div id="user-widget">
+        <% if current_user %>
+          <%= image_tag current_user.image %> <strong> <%= current_user.name %></strong>!
+        <% else %>
+          <%= link_to "<i class=\"fa fa-1x fa-facebook-square\" aria-hidden=\"true\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
+        <% end %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</section>

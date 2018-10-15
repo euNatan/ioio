@@ -8,17 +8,19 @@ body {
   overflow-x: hidden;
 }
 .facebook-button{
-  background-color: #4267b2;
-  border-radius: 5px;
-  border: solid 1px #29487d;
-  height: 30px;
-  width: 173px;
-  margin: 10px auto;
+  background-color: #4267b2 !important;
+  border-radius: 5px !important;
+  border: solid 1px #29487d !important;
+  height: 30px !important;
+  width: 173px !important;
+  margin: 10px auto !important;
   color: #eee !important;
-  padding: 5px 10px;
-  font-weight: bold;
+  font-weight: bold !important;
+  padding: 10px 10px 10px 10px !important;
+ font-size: 14pt;
 
 }
+#user-widget{float:right;}
 .facebook-button:hover{
   background-color: #4267b2 !important;
   border: solid 1px #29487d !important;
