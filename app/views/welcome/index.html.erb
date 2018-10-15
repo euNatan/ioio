@@ -1,30 +1,18 @@
 <section id="home-slider">
-  <!--slide 1-->
-  <div style="background: url('assets/placeholders/slider_1.jpg')">
+  <!--slide -->
+  <% @banners.each do |banner| %>
+  <div style="background: url('<%= banner.image.banner.url %>')">
     <div class="row">
       <div class="small-16 columns">
         <div class="cta-text">
-          <p> <span>New Game is Out!</span></p>
-          <p> <span>Lorem Ipsum is simply</span></p>
-          <p> <span>dummy text!</span></p><a href="#" class="button cta-button">Try the Demo! <span>for Windows &amp; MacOS</span></a>
+          <p> <span><%= banner.description %></span></p>
+          <a href="#" class="button cta-button"><%= banner.button %> <span>Seja o maior de todos</span></a>
         </div>
       </div>
     </div>
   </div>
-  <!--//slide 1-->
-  <!--slide-2-->
-  <div style="background: url('assets/placeholders/slider_1.jpg')">
-    <div class="row">
-      <div class="small-16 columns">
-        <div class="cta-text">
-          <p> <span>X Game Update!</span></p>
-          <p> <span>Lorem Ipsum is simply</span></p>
-          <p> <span>dummy text!</span></p><a href="#" class="button cta-button">Try the Demo! <span>for Windows</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--//slide-2-->
+  <% end %>
+  <!--//slide -->
 
 </section>
 
@@ -68,48 +56,22 @@
       <!--notebook-->
       <div class="notebook">
 
-        <header><h2 class="title">Blog Notes</h2></header>
+        <header><h2 class="title">Top Colecionadores</h2></header>
         <div class="blog-entries notebook-pattern">
 
+          <% for i in 0..5 %>
           <div class="entry row large-collapse">
-            <div class="date small-3 large-2 columns">
-              <p>Sep</p><span>07</span>
+            <div class="date small-4 large-3 columns">
+              <p>Qtde:</p><span>0011</span>
             </div>
-            <div class="article-preview small-13 large-14 columns">
-              <h6><a href="#">Lorem Ipsum is simply dummy text</a></h6>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><a href="#" class="link">Read More &rsaquo;</a>
+            <div class="article-preview small-12 large-13 columns">
+              <h6><a href="#">Augusto brito</a></h6>
+              <p>Brasil - SP - São Paulo</p>
+              <a href="#" class="link">Veja mais &rsaquo;</a>
             </div>
           </div><!--//entry-->
+          <% end %>
 
-          <div class="entry row large-collapse">
-            <div class="date small-3 large-2 columns">
-              <p>Sep</p><span>01</span>
-            </div>
-            <div class="article-preview small-13 large-14 columns">
-              <h6><a href="#">New Game Released</a></h6>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><a href="#" class="link">Read More &rsaquo;</a>
-            </div>
-          </div><!--//entry-->
-
-          <div class="entry row large-collapse">
-            <div class="date small-3 large-2 columns">
-              <p>Aug</p><span>25</span>
-            </div>
-            <div class="article-preview small-13 large-14 columns">
-              <h6><a href="#">Game Update Available</a></h6>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><a href="#" class="link">Read More &rsaquo;</a>
-            </div>
-          </div><!--//entry-->
-
-          <div class="entry row large-collapse">
-            <div class="date small-3 large-2 columns">
-              <p>Jul</p><span>31</span>
-            </div>
-            <div class="article-preview small-13 large-14 columns">
-              <h6><a href="#">Patch Release 1.1</a></h6>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><a href="#" class="link">Read More &rsaquo;</a>
-            </div>
-          </div><!--//entry-->
 
         </div>
       </div>

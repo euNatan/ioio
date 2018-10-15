@@ -1,4 +1,4 @@
-class ImageUploader < CarrierWave::Uploader::Base
+class BannerUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -15,8 +15,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
 
-  version :medium do
-    process resize_to_fill: [650,335]
+  version :banner do
+    process resize_to_fill: [1900,745]
   end
 
   version :thumb do
@@ -24,8 +24,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
 
-  def extension_white_list
-    %w(jpg jpeg gif png)
+  def store_dir
+    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
+
 
 end
