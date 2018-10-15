@@ -11,11 +11,12 @@ body {
   background-color: #4267b2;
   border-radius: 5px;
   border: solid 1px #29487d;
-  padding: 0px 0px 0px 0;
   height: 30px;
   width: 173px;
   margin: 10px auto;
   color: #eee !important;
+  padding: 5px 10px;
+  font-weight: bold;
 
 }
 .facebook-button:hover{
@@ -60,7 +61,7 @@ body {
   width: 100%;
   position: absolute;
   padding: 0px !important;
-  
+
 }
 
 #wrapper.toggled #page-content-wrapper {

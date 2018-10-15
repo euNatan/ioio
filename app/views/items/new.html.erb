@@ -1,0 +1,31 @@
+<section id="home-slider">
+  <!--slide -->
+  <% Banner.background.each do |banner| %>
+  <div class="item-slider" style="background: url('<%= banner.image.banner.url %>')">
+    <div class="row">
+      <div class="small-16 columns">
+        <div class="ad-google-item">
+          <iframe src="https://aka-cdn.adtechus.com/apps/144/Ad0St3Sz225Sq0V1Id26307216/banner.html" marginwidth="0" scrolling="no" marginheight="0" width="728" height="90" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <!--//slide -->
+
+</section>
+<section id="main-content">
+  <div class="row">
+    <h1>Nova Conquista</h1>
+    <div id="user-widget">
+      <% if current_user %>
+        <%= image_tag current_user.image %> <strong> <%= current_user.name %></strong>!
+      <% else %>
+        <%= link_to "<i class=\"fa fa-1x fa-facebook-square\" aria-hidden=\"true\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
+      <% end %>
+    </div>
+
+    <%= render 'form', item: @item %>
+
+  </div>
+</section>

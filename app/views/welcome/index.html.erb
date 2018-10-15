@@ -1,12 +1,12 @@
 <section id="home-slider">
   <!--slide -->
-  <% @banners.each do |banner| %>
+  <% Banner.background.each do |banner| %>
   <div style="background: url('<%= banner.image.banner.url %>')">
     <div class="row">
       <div class="small-16 columns">
         <div class="cta-text">
           <p> <span><%= banner.description %></span></p>
-          <a href="#" class="button cta-button"><%= banner.button %> <span>Seja o maior de todos</span></a>
+          <%=link_to "#{banner.button} <span>Seja o maior de todos</span>".html_safe, new_item_path, class:"button cta-button" %>
         </div>
       </div>
     </div>
