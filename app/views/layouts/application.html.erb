@@ -30,36 +30,37 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
+              <div class="client">
                 <li class="sidebar-brand">
                   <div id="user-widget">
                     <% if current_user %>
                       <%= image_tag current_user.image.thumb %> <strong> <%= current_user.name %></strong>!
+                      <%= link_to "Sair", destroy_user_session_path, method: :delete %>
                     <% else %>
                       <%= link_to "<i class=\"fa fa-1x fa-facebook-square\" aria-hidden=\"true\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
                     <% end %>
                   </div>
                 </li>
-                <li>
-                  <% if current_user %>
-                    <%= link_to "Sair", destroy_user_session_path, method: :delete %>
-                  <% end %>
-                </li>
 
+              </div>
+                <h3>Colecionáveis</h3>
+                <% Collection.all.collect.each do |c|%>
+                <li class="medal"><%= link_to "#{image_tag(c.image.thumb)} #{c.name}".html_safe, "#" %></li>
+                <%end%>
             </ul>
 
-            <div class="field select">
-              <%= select_tag :collection_id, Collection.all.collect { |c| [ c.name, c.id, {'data-image': c.image.thumb} ] }, include_blank: false %>
-            </div>
+
         </div>
         <!-- /#sidebar-wrapper -->
         <body id="homepage">
           <header id="main-header">
             <div class="row">
+              <div class="small-3 columns hide-on-desk"><a href="#menu-toggle" id="menu-toggle"><img src="assets/icons/burger.svg"/></a></div>
               <div class="small-8 large-3 columns logo"><%= link_to(image_tag("logo.png"), :root, class:"logo") %></a></div>
               <nav id="main-nav" class="small-19 large-13 columns">
                 <ul class="main-menu">
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Colecionáveis</a></li>
+                  <!--li><a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Colecionáveis</a></li-->
                   <li><a href="games.html">Campeonatos</a></li>
                   <li><a href="blog.html">Como funciona</a></li>
                   <li><a href="about.html">Sobre</a></li>

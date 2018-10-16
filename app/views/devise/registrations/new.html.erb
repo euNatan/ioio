@@ -16,7 +16,15 @@
 </section>
 <section id="main-content">
   <div class="row">
-    <h1>Cadastre-se</h1>
+    <h1>Cadastre-se
+      <div id="user-widget">
+        <% if current_user %>
+          <%= image_tag current_user.image %> <strong> <%= current_user.name %></strong>!
+        <% else %>
+          <%= link_to "<i class=\"fa fa-1x fa-facebook-square\" aria-hidden=\"true\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
+        <% end %>
+      </div>
+    </h1>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:multipart => true}) do |f| %>
       <%= devise_error_messages! %>
@@ -53,13 +61,7 @@
       <div class="actions">
         <%= f.submit "Cadastrar", class:"item-button" %>
       </div>
-      <div id="user-widget">
-        <% if current_user %>
-          <%= image_tag current_user.image %> <strong> <%= current_user.name %></strong>!
-        <% else %>
-          <%= link_to "<i class=\"fa fa-1x fa-facebook-square\" aria-hidden=\"true\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
-        <% end %>
-      </div>
+
     <% end %>
 
     <%= render "devise/shared/links" %>

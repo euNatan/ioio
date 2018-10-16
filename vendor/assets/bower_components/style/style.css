@@ -8,12 +8,35 @@
 .dark-purple {
 	color: #231a1e
 }
+
 .select select, .select select option{
 	font-size: 16pt !important;
 	font-family: Luckiest Guy, cursive !important;
 	font-weight: 400 !important;
 }
-
+.medal a{
+	font-size: 13pt !important;
+	font-family: Luckiest Guy, cursive !important;
+	font-weight: 400 !important;
+	color: white !important;
+}
+.medal img{
+	width:40px;
+}
+.medal{
+	float: left;
+	width: 100%;
+	border-bottom: 1px dotted gray;
+	height: 52px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+.client{
+	height: 100px;
+	font-size: 12pt !important;
+	font-family: Luckiest Guy, cursive !important;
+	font-weight: 400 !important;
+}
 .select select {
 
     -webkit-appearance: none;
@@ -5527,7 +5550,8 @@ body h6 a:focus {
 }
 
 #main-header .logo {
-	margin-top: 1.4rem
+	margin-top: 1.4rem;
+	text-align: center;
 }
 
 @media screen and (min-width:64em) {
@@ -5590,6 +5614,14 @@ body h6 a:focus {
 		width: 100%;
 		float: left;
 		margin: 0!important
+	}
+	.hide-on-desk{
+		margin-top: 27px;
+	}
+}
+@media screen and (min-width:60em){
+	.hide-on-desk{
+		display:none;
 	}
 }
 
@@ -6747,6 +6779,7 @@ table th {
 
 /*select*/
 #item_collection_id_child, #collection_id_child{height: 200px !important;}
+#collection_id_msdd{width:100% !important}
 .ddlabel{font-family: Luckiest Guy, cursive !important;font-size: 16pt;}
 .borderRadius{-moz-border-radius:5px; border-radius:5px; }
 .borderRadiusTp{-moz-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0;}
