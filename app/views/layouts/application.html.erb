@@ -9,6 +9,7 @@
     <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.js" %>
     <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js" %>
     <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.js" %>
+    <%= javascript_include_tag "http://www.marghoobsuleman.com/mywork/jcomponents/image-dropdown/samples/js/msdropdown/jquery.dd.js" %>
 
     <link href='http://fonts.googleapis.com/css?family=Luckiest+Guy|Bitter:700|Open+Sans:400,600,600italic' rel='stylesheet' type='text/css'>
   </head>
@@ -32,7 +33,7 @@
                 <li class="sidebar-brand">
                   <div id="user-widget">
                     <% if current_user %>
-                      <%= image_tag current_user.image %> <strong> <%= current_user.name %></strong>!
+                      <%= image_tag current_user.image.thumb %> <strong> <%= current_user.name %></strong>!
                     <% else %>
                       <%= link_to "<i class=\"fa fa-1x fa-facebook-square\" aria-hidden=\"true\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
                     <% end %>
@@ -45,6 +46,10 @@
                 </li>
 
             </ul>
+
+            <div class="field select">
+              <%= select_tag :collection_id, Collection.all.collect { |c| [ c.name, c.id, {'data-image': c.image.thumb} ] }, include_blank: false %>
+            </div>
         </div>
         <!-- /#sidebar-wrapper -->
         <body id="homepage">
@@ -134,5 +139,7 @@
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
+    var oDropdown = $("#item_collection_id").msDropdown().data("dd");
+    var oDropdown = $("#collection_id").msDropdown().data("dd");
     </script>
 </html>

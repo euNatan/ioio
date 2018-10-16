@@ -5,22 +5,24 @@ Trestle.resource(:collections) do
 
   # Customize the table columns shown on the index view.
   #
-  # table do
-  #   column :name
-  #   column :created_at, align: :center
-  #   actions
-  # end
+  table do
+    column :name
+    column :description
+    column :image do |img|
+      image_tag img.image.thumb
+    end
+    column :created_at, align: :center
+    actions
+  end
 
   # Customize the form fields shown on the new/edit views.
   #
-  # form do |collection|
-  #   text_field :name
-  #
-  #   row do
-  #     col(xs: 6) { datetime_field :updated_at }
-  #     col(xs: 6) { datetime_field :created_at }
-  #   end
-  # end
+  form do |collection|
+    text_field :name
+    text_area :description
+    text_field :stock
+    file_field :image, as: :file, input_html: { multiple: true }
+  end
 
   # By default, all parameters passed to the update and create actions will be
   # permitted. If you do not have full trust in your users, you should explicitly

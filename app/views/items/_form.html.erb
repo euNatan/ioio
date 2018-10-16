@@ -11,18 +11,20 @@
     </div>
   <% end %>
 
+  <div class="field select">
+    <%= f.label :collection_id, "Modelo do Ioio" %>
+    <%= f.select :collection_id, Collection.all.collect { |c| [ c.name, c.id, {'data-image': c.image.thumb} ] }, include_blank: false %>
+  </div>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <br>
+
   <div class="field">
-    <%= f.label :collection_id %>
-    <%= f.select :collection_id, Collection.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
+    <%= f.label :code, "Código do IOIO" %>
+    <%= f.text_area :code %>
   </div>
 
   <div class="field">
-    <%= f.label :user_id %>
-    <%= f.number_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= f.label :descriprion %>
+    <%= f.label :descriprion, "Detalhes sobre seu IOIO" %>
     <%= f.text_area :descriprion %>
   </div>
 
