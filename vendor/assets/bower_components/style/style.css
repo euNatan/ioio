@@ -5615,12 +5615,24 @@ body h6 a:focus {
 		float: left;
 		margin: 0!important
 	}
-	.hide-on-desk{
-		margin-top: 27px;
+	.mt25{
+		margin-top: 25px;
 	}
+	.medalhome img {
+
+	    width: 65%;
+	    margin: auto;
+
+	}
+
 }
 @media screen and (min-width:60em){
 	.hide-on-desk{
+		display:none;
+	}
+}
+@media screen and (max-width:60em){
+	.hide-on-mobile{
 		display:none;
 	}
 }
@@ -5792,10 +5804,16 @@ body h6 a:focus {
 }
 
 #home-slider .cta-text {
-	position: absolute;
-	top: 350px;
-	width: 720px;
+	position: relative;
+
+top: 180px;
+
+width: 100%;
+
+text-align: center;
 }
+.mtop30{margin-top: 30px;}
+
 
 #home-slider .cta-text p {
 	font-size: 2.33333rem;

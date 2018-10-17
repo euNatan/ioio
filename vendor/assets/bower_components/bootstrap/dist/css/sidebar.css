@@ -27,7 +27,7 @@ body {
   color: #fff !important;
 }
 
-
+.small-4-fixed{width:80px;}
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
