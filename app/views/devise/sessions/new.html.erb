@@ -16,16 +16,14 @@
 </section>
 <section id="main-content">
   <div class="row">
-    <h1>Entrar
+    <h1>Entrar</h1>
+      <% if current_user %>
       <div id="user-widget">
-        <% if current_user %>
-          <%= image_tag current_user.image %> <strong> <%= current_user.name %></strong>!
-        <% else %>
-          <%= link_to "<i class=\"fa fa-1x fa-facebook-square\" aria-hidden=\"true\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
-        <% end %>
+        <%= image_tag current_user.image %> <strong> <%= current_user.name %></strong>!
       </div>
-    </h1>
+      <% end %>
 
+      <br>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.label :email %><br />
@@ -45,7 +43,7 @@
       <% end -%>
 
       <div class="actions">
-        <%= f.submit "Entrar", class:"item-button" %>
+        <%= f.submit "Entrar", class:"item-button" %> <%= link_to "<i class=\"fa fa-1x fa-facebook-square\" aria-hidden=\"true\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
       </div>
 
     <% end %>

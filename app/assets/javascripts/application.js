@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap/dist/js/bootstrap
 //= require style/functions
+//= require style/uploadfive
 //= require turbolinks
 //= require_tree .

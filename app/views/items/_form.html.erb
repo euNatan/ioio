@@ -25,16 +25,38 @@
 
   <div class="field">
     <%= f.label :descriprion, "Detalhes sobre seu IOIO" %>
-    <%= f.text_area :descriprion %>
+    <%= f.text_area :descriprion, height:400 %>
   </div>
 
-  <div class="field">
-    <%= f.label :status_id %>
-    <%= f.number_field :status_id %>
-  </div>
+  <%= f.file_field :image, multiple: true %>
+
+  <div id="uploaded_photos"></id>
 
   <div class="actions">
     <%= f.submit "Cadastrar", class:"item-button" %>
 
   </div>
 <% end %>
+
+<script>
+
+
+$('#item_image').uploadifive({
+
+    'uploadScript' : '/photo/uploader.json',
+    'formData' : {'authenticity_token': $('input[name=authenticity_token]').val()},
+    'fileTypeDesc' : 'Arquivos de Imagem',
+    'fileTypeExts' : '*.gif; *.jpg; *.jpeg; *.png',
+    'buttonText': 'Selecionar Arquivos',
+    'uploadLimit' : 4,
+    'onUploadComplete' : function(file, data, response) {
+        var json = JSON.parse(data),
+            template = '<div class="photo small-4 columns">' +
+                '<input type="hidden" name="classified_ad[photo_ids][]" value="' + json.id + '" />' +
+                '<img src="' + json.url + '" >' +
+                '</div>';
+
+        $('#uploaded_photos').append(template);
+    }
+});
+</script>

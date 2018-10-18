@@ -9,6 +9,10 @@
 	color: #231a1e
 }
 
+#new_item{
+	text-align: left;
+	margin-top: 110px;
+}
 .select select, .select select option{
 	font-size: 16pt !important;
 	font-family: Luckiest Guy, cursive !important;
@@ -3018,7 +3022,8 @@ label {
 	font-size: .93333rem;
 	font-weight: 400;
 	line-height: 1.8;
-	color: #fff
+	color: #fff;
+	margin-left: 10px;
 }
 
 label.middle {
@@ -5877,7 +5882,9 @@ text-align: center;
 }
 
 #main-content {
-	background: #302429 image-url("backgrounds/bg-body.jpg") no-repeat center top
+	background: #302429 image-url("backgrounds/bg-body.jpg") no-repeat center top;
+	text-align: center;
+	margin-top: -100px;
 }
 
 .about-us-summary p {

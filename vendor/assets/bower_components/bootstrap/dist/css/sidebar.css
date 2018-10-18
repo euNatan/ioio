@@ -13,13 +13,12 @@ body {
   border: solid 1px #29487d !important;
   margin: 10px auto !important;
   color: #eee !important;
-  font-weight: bold !important;
-  padding: 10px 10px 10px 10px !important;
+  padding: 11px 10px 7px 10px !important;
  font-size: 12pt;
  font-family: Luckiest Guy, cursive !important;
 
 }
-#user-widget{float:left;height: 130px;width: 97%;}
+#user-widget{float:left;height: 70px;width: 97%;}
 #user-widget strong{color: white;}
 .facebook-button:hover{
   background-color: #4267b2 !important;

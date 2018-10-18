@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
+  post 'photo/uploader'
+
   resources :items
+
+  resources :items do
+    resources :photos, :only => [:create, :destroy]
+  end
+
   get 'welcome/index'
   root 'welcome#index'
 
