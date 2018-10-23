@@ -15,11 +15,15 @@ Trestle.resource(:items) do
     actions
   end
 
+
+
   # Customize the form fields shown on the new/edit views.
   #
   form do |article|
-    text_field :title
-    text_field :description
+    text_field :collection_id
+    text_field :user_id
+    text_field :code
+    text_field :descriprion
     file_field :image, as: :file, input_html: { multiple: true }
   end
 

@@ -8,7 +8,9 @@
 .dark-purple {
 	color: #231a1e
 }
-
+.mt25{
+	margin-top: 25px;
+}
 #new_item{
 	text-align: left;
 	margin-top: 110px;
@@ -86,7 +88,9 @@
 	width: 200px;
 	padding: 10px 0 5px;
 }
-
+.actions{
+	text-align: center;
+}
 body p a,
 footer.main-footer p,
 .accordion-title {
@@ -5629,6 +5633,7 @@ body h6 a:focus {
 	    margin: auto;
 
 	}
+	.item-button{width: 140px !important;}
 
 }
 @media screen and (min-width:60em){
@@ -5870,7 +5875,7 @@ text-align: center;
 .content-top {
 	background: image-url("backgrounds/bg-body-top.png") repeat-x center top;
 	height: 52px;
-	margin-top: -140px;
+	margin-top: -45;
 	position: relative;
 	z-index: 1000
 }
@@ -5883,8 +5888,9 @@ text-align: center;
 
 #main-content {
 	background: #302429 image-url("backgrounds/bg-body.jpg") no-repeat center top;
-	text-align: center;
+  /*text-align: center;*/
 	margin-top: -100px;
+	padding: 10px;
 }
 
 .about-us-summary p {

@@ -4,12 +4,12 @@
     <title>Divida</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.js" %>
-    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js" %>
-    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.js" %>
-    <%= javascript_include_tag "http://www.marghoobsuleman.com/mywork/jcomponents/image-dropdown/samples/js/msdropdown/jquery.dd.js" %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'true' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'true' %>
+    <%#= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.js" %>
+    <%#= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js" %>
+    <%#= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.js" %>
+    <%#= javascript_include_tag "http://www.marghoobsuleman.com/mywork/jcomponents/image-dropdown/samples/js/msdropdown/jquery.dd.js" %>
 
     <link href='http://fonts.googleapis.com/css?family=Luckiest+Guy|Bitter:700|Open+Sans:400,600,600italic' rel='stylesheet' type='text/css'>
   </head>
@@ -58,15 +58,15 @@
             <div class="side-menu small-4-fixed columns hide-on-desk mt25"><a href="#menu-toggle" id="menu-toggle"><img src="/assets/icons/burger.svg"/></a></div>
             <div class="row">
               <!--div class="small-4 columns mt25"><a href="#menu-toggle" id="menu-toggle"><img src="assets/icons/burger.svg"/></a></div-->
-              <div class="small-8 large-3 columns logo"><%= link_to(image_tag("logo.png"), :root, class:"logo") %></a></div>
+              <div class="small-8 large-3 columns logo"><%= link_to(image_tag("logo.png"), '/#', class:"logo") %></a></div>
               <nav id="main-nav" class="small-19 large-13 columns">
                 <ul class="main-menu">
-                  <li><a href="index.html">Home</a></li>
+                  <li><%= link_to "Home", "/#" %></li>
                   <li><a href="#menu-toggle2" class="btn btn-secondary hide-on-mobile" id="menu-toggle2">Colecionáveis</a></li>
-                  <li><a href="games.html">Campeonatos</a></li>
-                  <li><a href="blog.html">Como funciona</a></li>
-                  <li><a href="about.html">Sobre</a></li>
-                  <li><a href="contact.html">Contato</a></li>
+                  <li><%= link_to "Campeonatos", "#" %></li>
+                  <li><%= link_to "Como funciona", "#" %></a></li>
+                  <li><%= link_to "Sobre", "/sobre" %></li>
+                  <li><%= link_to "Contato", "/contato" %></li>
                 </ul>
                 <ul class="mobile-menu"></ul>
               </nav>
@@ -126,7 +126,7 @@
             <!--copyright-->
             <div class="small-16 medium-6 columns">
               <p class="copyright">
-                Copyright &copy; GameDevs Redux <span class="date"></span>. All Rights Reserved.
+                Copyright &copy; euNatan <span class="date"></span>. All Rights Reserved.
               </p>
             </div>
             <!--//copyright-->

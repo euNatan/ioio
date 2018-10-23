@@ -13,7 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap/dist/js/bootstrap
-//= require style/functions
 //= require style/uploadfive
-//= require turbolinks
+//= require jquery/slick-nav
+//= require jquery/slick-carousel
+//= require jquery/lightbox
+//= require jquery/litebox
+//= require jquery/jquerydd
+//= require style/functions
+// require turbolinks
 //= require_tree .
