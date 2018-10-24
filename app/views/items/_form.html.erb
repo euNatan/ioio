@@ -53,7 +53,7 @@ $('#item_image').uploadifive({
     'onUploadComplete' : function(file, data, response) {
         var json = JSON.parse(data),
             template = '<div class="photo small-4 columns">' +
-                '<input type="hidden" name="item[photo_ids][]" value="' + json.id + '" />' +
+                '<input type="hidden" name="item[photo_ids][]" value="' + parseInt(json.id) + '" />' +
                 '<img src="' + json.url + '" >' +
                 '</div>';
 

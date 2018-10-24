@@ -28,6 +28,8 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
+        
+        Photo.where(id: params[:item][:photo_ids]).update_all(item_id: @item.id)
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
         format.json { render :show, status: :created, location: @item }
       else
@@ -40,6 +42,7 @@ class ItemsController < ApplicationController
   # PATCH/PUT /items/1
   # PATCH/PUT /items/1.json
   def update
+
     respond_to do |format|
       if @item.update(item_params)
         format.html { redirect_to @item, notice: 'Item was successfully updated.' }
@@ -69,6 +72,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:collection_id, :user_id, :descriprion, :status_id)
+      params.require(:item).permit(:collection_id, :user_id, :descriprion, :status_id, :code, :photo_ids)
     end
 end

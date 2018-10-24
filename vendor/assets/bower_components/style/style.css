@@ -5563,7 +5563,7 @@ body h6 a:focus {
 	text-align: center;
 }
 
-@media screen and (min-width:64em) {
+@media screen and (min-width:66em) {
 	#main-header .logo {
 		margin-top: 1.2rem
 	}
@@ -5573,7 +5573,7 @@ body h6 a:focus {
 	text-align: right
 }
 
-@media screen and (min-width:64em) {
+@media screen and (min-width:66em) {
 	#main-header #main-nav ul.main-menu {
 		margin: 2.06667rem 0 0
 	}
@@ -5614,7 +5614,7 @@ body h6 a:focus {
 	display: none
 }
 
-@media screen and (max-width:63.9375em) {
+@media screen and (max-width:66.9375em) {
 	.main-menu {
 		display: none
 	}
@@ -5636,12 +5636,12 @@ body h6 a:focus {
 	.item-button{width: 140px !important;}
 
 }
-@media screen and (min-width:60em){
+@media screen and (min-width:66em){
 	.hide-on-desk{
 		display:none;
 	}
 }
-@media screen and (max-width:60em){
+@media screen and (max-width:66em){
 	.hide-on-mobile{
 		display:none;
 	}

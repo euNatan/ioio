@@ -10,7 +10,9 @@ Trestle.resource(:items) do
     column :user_id
     column :code
     column :descriprion
-    column :photos
+    column :photos do |img|
+      image_tag img
+    end
     column :created_at, align: :center
     actions
   end
