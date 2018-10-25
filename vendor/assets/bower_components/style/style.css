@@ -6439,11 +6439,12 @@ footer.main-footer p.copyright {
 .details-link a {
 	background: image-url("backgrounds/btn-large.png") no-repeat top left;
 	display: inline-block;
-	font-size: 1.86667rem;
+	font-size: 2.4rem;
 	line-height: 1.73333rem;
 	text-transform: uppercase;
-	padding: 1.8rem 4rem 1.26667rem 3.33333rem;
-	margin-top: 2.33333rem
+	padding: 0 4rem 1.26667rem 3.33333rem;
+	margin-top: 2.33333rem;
+	text-shadow: 1px 1px black;
 }
 
 .details-link a:hover,

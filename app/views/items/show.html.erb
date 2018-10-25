@@ -1,24 +1,49 @@
-<p id="notice"><%= notice %></p>
+<%= render "share/slide" %>
 
-<p>
-  <strong>Collection:</strong>
-  <%= @item.collection_id %>
-</p>
+<section id="main-content">
 
-<p>
-  <strong>User:</strong>
-  <%= @item.user_id %>
-</p>
+      <div class="row">
+        <div class="small-16 columns">
+          <h1>Detalhes</h1>
+          <div class="big-sep"></div>
+        </div>
+      </div>
 
-<p>
-  <strong>Descriprion:</strong>
-  <%= @item.descriprion %>
-</p>
+      <div class="row game-presentation">
+        <div class="small-16 large-9 columns" style="text-align: center;">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/E7GtoKf0XOo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <%#=image_tag @item.photo[0].image.medium, class:"thumbnail" %>
+          <div class="thumbnails gallery">
+            <% @item.photo.each do |photo| %>
+              <%=link_to image_tag(photo.image.thumb), photo.image.url, rel:"prettyPhoto[gallery]", class:"game-gallery thumbnail" %>
+            <% end %>
+          </div>
+        </div>
+        <div class="small-16 large-7 columns">
+          <div class="game-description">
+            <h2><%= image_tag @item.collection.image.thumb %> <%= @item.collection.name %> #<%= @item.code%></h2>
 
-<p>
-  <strong>Status:</strong>
-  <%= @item.status_id %>
-</p>
+            <p>
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+              <br><br>
+              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
+            </p>
+          </div>
+          <div class="platforms">
+            <h5 class="white">Disponível para negociações</h5>
+            
+          </div>
+          <div class="details-link">
+            <a href="games-single.html">Click aqui</a>
+          </div>
+        </div>
+      </div>
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+      <div class="row">
+        <div class="small-16 columns">
+          <div class="big-sep"></div>
+        </div>
+      </div>
+
+
+</section>

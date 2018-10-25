@@ -10,14 +10,16 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+// require jquery
+//= require jquery/pretty
+
 //= require jquery_ujs
 //= require bootstrap/dist/js/bootstrap
 //= require style/uploadfive
 //= require jquery/slick-nav
 //= require jquery/slick-carousel
-//= require jquery/lightbox
-//= require jquery/litebox
+// require jquery/lightbox
+// require jquery/litebox
 //= require jquery/jquerydd
 //= require style/functions
 // require turbolinks
