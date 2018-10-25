@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'collection/show'
+
   post 'photo/uploader'
 
   resources :items

@@ -21,17 +21,15 @@
         </div>
         <div class="small-16 large-7 columns">
           <div class="game-description">
-            <h2><%= image_tag @item.collection.image.thumb %> <%= @item.collection.name %> #<%= @item.code%></h2>
-
+            <h2><%=link_to image_tag(@item.collection.image.thumb), collection_show_path(id: @item.collection.id) %> <%=link_to @item.collection.name, collection_show_path(id: @item.collection.id) %> #<%= sprintf '%05d', @item.code%></h2>
+            <h5>dono: <span class="username"><%= @item.user.name %></span></h5>
             <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-              <br><br>
-              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
+              <%= @item.descriprion %>
             </p>
           </div>
           <div class="platforms">
             <h5 class="white">Disponível para negociações</h5>
-            
+
           </div>
           <div class="details-link">
             <a href="games-single.html">Click aqui</a>

@@ -49,6 +49,30 @@ $(document).ready(function (){
     autoplaySpeed: 5000
   });
 
+
+  /* uploadfive */
+  $('#item_image').uploadifive({
+
+      'uploadScript' : '/photo/uploader.json',
+      'formData' : {'authenticity_token': $('input[name=authenticity_token]').val(), 'item_id': '<%= @item.id %>'},
+      'fileTypeDesc' : 'Arquivos de Imagem',
+      'fileTypeExts' : '*.gif; *.jpg; *.jpeg; *.png',
+      'buttonText': 'Selecionar Arquivos',
+      'buttonClass'  : 'item-button',
+      'height'        : 46,
+      'uploadLimit' : 5,
+      'onUploadComplete' : function(file, data, response) {
+          var json = JSON.parse(data),
+              template = '<div class="photo small-4 columns">' +
+                  '<input type="hidden" name="item[photo_ids][]" value="' + parseInt(json.id) + '" />' +
+                  '<img src="' + json.url + '" >' +
+                  '</div>';
+
+          $('#uploaded_photos').append(template);
+          $('#uploadifive-item_image-queue').hide();
+      }
+  });
+
 /*-----------------------------------------------------------------------------------*/
 /*  GAMES PAGE LITEBOX (GALLERY)
 /*-----------------------------------------------------------------------------------*
@@ -89,10 +113,24 @@ $(document).ready(function (){
 });
 
 
+
 /*-----------------------------------------------------------------------------------*/
-/*  pretty lightbox
+/*  pretty lightbox and others
 /*-----------------------------------------------------------------------------------*/
 $(document).ready(function(){
-$(".gallery a[rel^='prettyPhoto']").prettyPhoto();
+  $(".gallery a[rel^='prettyPhoto']").prettyPhoto();
 
+  <!-- Menu Toggle Script -->
+    $("#menu-toggle2").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $(".slicknav_collapsed").toggle();
+
+    });
+    var oDropdown = $("#item_collection_id").msDropdown().data("dd");
+    var oDropdown = $("#collection_id").msDropdown().data("dd");
 });

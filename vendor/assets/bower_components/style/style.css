@@ -15,11 +15,42 @@
 	text-align: left;
 	margin-top: 110px;
 }
+.username{color:white}
+.line-code{
+	width: 100px;
+	float: left;
+	height: 25px;
+	margin: 10px 5px;
+	color: #b6b6b6;
+	background-color: #6e6e6e;
+	text-align: center;
+	border-top: 1px solid gray;
+	border-left: 1px solid gray;
+	font-weight: bold;
+}
+.line-active{
+	font-weight: bold;
+	width: 100px;
+	float: left;
+	height: 25px;
+	margin: 10px 5px;
+	color: #fff;
+	background-color: #5ebfe5;
+	text-align: center;
+	border-top: 1px solid #4792b0;
+	border-left: 1px solid #4792b0;
+}
+.line-active:hover{
+	border-top: 2px solid #33667b;
+	border-left: 2px solid #33667b;
+}
 .select select, .select select option{
 	font-size: 16pt !important;
 	font-family: Luckiest Guy, cursive !important;
 	font-weight: 400 !important;
 }
+.fontgame{font-family: Luckiest Guy, cursive !important;}
+.disponiveis{font-size: 17pt; color:lightgreen}
 .medal a{
 	font-size: 13pt !important;
 	font-family: Luckiest Guy, cursive !important;

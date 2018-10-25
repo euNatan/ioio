@@ -36,29 +36,3 @@
 
   </div>
 <% end %>
-
-<script>
-
-
-$('#item_image').uploadifive({
-
-    'uploadScript' : '/photo/uploader.json',
-    'formData' : {'authenticity_token': $('input[name=authenticity_token]').val(), 'item_id': '<%= @item.id %>'},
-    'fileTypeDesc' : 'Arquivos de Imagem',
-    'fileTypeExts' : '*.gif; *.jpg; *.jpeg; *.png',
-    'buttonText': 'Selecionar Arquivos',
-    'buttonClass'  : 'item-button',
-    'height'        : 46,
-    'uploadLimit' : 5,
-    'onUploadComplete' : function(file, data, response) {
-        var json = JSON.parse(data),
-            template = '<div class="photo small-4 columns">' +
-                '<input type="hidden" name="item[photo_ids][]" value="' + parseInt(json.id) + '" />' +
-                '<img src="' + json.url + '" >' +
-                '</div>';
-
-        $('#uploaded_photos').append(template);
-        $('#uploadifive-item_image-queue').hide();
-    }
-});
-</script>
