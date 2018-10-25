@@ -20,6 +20,7 @@ Trestle.resource(:banners) do
   form do |article|
     text_field :title
     text_field :description
+    text_field :button
     file_field :image, as: :file, input_html: { multiple: true }
   end
 
