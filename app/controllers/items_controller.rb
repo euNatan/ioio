@@ -1,10 +1,11 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:edit, :update, :destroy, :index, :new]
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    #get all itens to current user
+    @items = current_user.items
   end
 
   # GET /items/1

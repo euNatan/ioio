@@ -1,0 +1,1 @@
+Administrator.create(email: "natanf.ti@gmail.com", password: "P0rt@lmdg", first_name: "Admin", last_name: "User")

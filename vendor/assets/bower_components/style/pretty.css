@@ -270,7 +270,7 @@
 		width: 100px;
 		z-index: 10000;
 	}
-
+	.pp_expand, .ppt{display:none !important}
 	@media screen and (max-width:66.9375em) {
 
 		div.pp_pic_holder{left:0 !important;position: absolute;width: 100% !important}
@@ -280,7 +280,7 @@
 		}
 		#pp_full_res{text-align: center;}
 		#fullResImage{width:300px !important; height:300px !important;}
-		.pp_expand, .ppt{display:none !important}
+
 		.pp_details{width:100% !important}
 	}
 

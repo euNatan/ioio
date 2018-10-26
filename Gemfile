@@ -26,6 +26,7 @@ gem 'omniauth-facebook', '~> 4.0'
 gem 'devise'
 gem "bower-rails"
 gem 'trestle'
+gem 'trestle-auth'
 gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
 #gem 'will_paginate', '>= 3.1'

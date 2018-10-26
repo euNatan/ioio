@@ -1,33 +1,58 @@
-<p id="notice"><%= notice %></p>
+<%= render "share/slide" %>
 
-<h1>Items</h1>
+<section id="main-content">
 
-<table>
-  <thead>
-    <tr>
-      <th>Collection</th>
-      <th>User</th>
-      <th>Descriprion</th>
-      <th>Status</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <div class="row">
+        <div class="small-16 columns">
+          <h1>Suas aquisições</h1>
+          <div class="big-sep"></div>
+        </div>
+      </div>
 
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.collection_id %></td>
-        <td><%= item.user_id %></td>
-        <td><%= item.descriprion %></td>
-        <td><%= item.status_id %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class="row">
+        <p id="notice"><%= notice %></p>
 
-<br>
+        <h4>
+            <div id="user-widget">
+              <% if current_user %>
+                <%= image_tag current_user.image.thumb %> <strong> <%= current_user.name %></strong>!
+                <%= link_to "Sair", destroy_user_session_path, method: :delete %>
+              <% else %>
+                <%= link_to "<i class=\"fa fa-1x fa-facebook-square\" aria-hidden=\"true\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
+              <% end %>
+            </div>
+        </h4>
 
-<%= link_to 'New Item', new_item_path %>
+
+        <div class="row">
+          <table>
+            <thead>
+              <tr>
+                <th>Collection</th>
+                <th>Photo</th>
+                <th>Descriprion</th>
+                <th>Status</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @items.each do |item| %>
+                <tr>
+                  <td><%= item.collection_id %></td>
+                  <td><%=image_tag item.photo[0].image.thumb %></td>
+                  <td><%= item.descriprion %></td>
+                  <td><%= item.status_id %></td>
+                  <td><%= link_to 'Show', item %></td>
+                  <td><%= link_to 'Edit', edit_item_path(item) %></td>
+                  <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <br>
+
+        <%= link_to 'New Item', new_item_path %>
+      </div>
+</section>
