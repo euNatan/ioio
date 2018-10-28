@@ -31,7 +31,7 @@
       <article class="about-us-summary">
         <h2><%= @about.title %></h2>
         <p>
-          <%= @about.description[0..600] %>...<a href="#" class="read-more">Leia mais ›</a>
+          <%= @about.description[0..600] %>...<%= link_to "Leia mais", "/sobre", class:"read-more" %>
         </p>
       </article>
     </div>
@@ -65,16 +65,16 @@
 
         <header><h2 class="title">Top Colecionadores</h2></header>
         <div class="blog-entries notebook-pattern">
-
-          <% for i in 0..5 %>
+          <% top_collections.each do |tc| %>
           <div class="entry row large-collapse">
             <div class="date small-4 large-3 columns">
-              <p>Qtde:</p><span>0011</span>
+              <p>Qtde:</p><span><%= tc.items.size %></span>
             </div>
             <div class="article-preview small-12 large-13 columns">
-              <h6><a href="#">Augusto brito</a></h6>
+              <h6><a href="#"><%= tc.name %></a></h6>
               <p>Brasil - SP - São Paulo</p>
-              <a href="#" class="link">Veja mais &rsaquo;</a>
+              <%= link_to "Veja mais", user_show_path(id: tc.id), class:"more" %>
+              <a href="#" class="link"> &rsaquo;</a>
             </div>
           </div><!--//entry-->
           <% end %>

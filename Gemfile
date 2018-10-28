@@ -23,7 +23,8 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'omniauth'
 gem 'omniauth-facebook', '~> 4.0'
-gem 'devise'
+#gem 'devise'
+gem 'devise', git: 'https://github.com/plataformatec/devise' #, ref: '88e9a85'
 gem "bower-rails"
 gem 'trestle'
 gem 'trestle-auth'
@@ -31,6 +32,7 @@ gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
 #gem 'will_paginate', '>= 3.1'
 gem 'mini_racer'
+gem "figaro"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

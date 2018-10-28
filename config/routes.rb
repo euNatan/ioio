@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'user/show'
+
   get 'collection/show'
 
   post 'photo/uploader'

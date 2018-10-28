@@ -1,0 +1,40 @@
+<%= render "share/slide" %>
+
+<section id="main-content">
+
+      <div class="row">
+        <div class="small-16 columns">
+          <h1><%= @user.name %></h1>
+          <div class="big-sep"></div>
+        </div>
+      </div>
+
+      <div class="row game-presentation fontgame">
+        <div class="small-16 large-4 columns center">
+          <%= image_tag @user.image.medium.url %>
+        </div>
+        <div class="small-16 large-12 columns">
+          <span class="desc"><h4>Email:</h4></span>
+          <p><%= @user.email %></p>
+
+          <span class="desc"><h4>Estoque:</h4></span>
+          <span class="disponiveis">499</span>/12
+
+        </div>
+      </div>
+
+      <div class="row game-presentation fontgame">
+        <div class="small-16 large-16 columns">
+          <% @user.items.each do |item|%>
+            <div class="small-16 large-4 item-list"><%= link_to "#{image_tag(item.collection.image.thumb)} #{item.collection.name} -  ##{sprintf '%05d', item.code}".html_safe, item %></div>
+          <%end%>
+          <% @user.items.each do |item|%>
+            <div class="small-16 large-4 item-list"><%= link_to "#{image_tag(item.collection.image.thumb)} #{item.collection.name} -  ##{sprintf '%05d', item.code}".html_safe, item %></div>
+          <%end%>
+          <% @user.items.each do |item|%>
+            <div class="small-16 large-4 item-list"><%= link_to "#{image_tag(item.collection.image.thumb)} #{item.collection.name} -  ##{sprintf '%05d', item.code}".html_safe, item %></div>
+          <%end%>
+        </div>
+      </div>
+
+</section>
