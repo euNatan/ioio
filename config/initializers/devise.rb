@@ -252,9 +252,9 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
-  config.omniauth :facebook, "1418276091583894", "3f03170ae60033344976cf13dcd9f544",
+  config.omniauth :facebook, ENV["facebook_app_id"], ENV["facebook_app_key"],
                            image_size: { width: 500, height: 500 },
-                           secure_image_url: true, callback_url: "http://localhost:3000/users/auth/facebook/callback"
+                           secure_image_url: true, callback_url: ENV["facebook_redirect"]
 
 
   # ==> Warden configuration

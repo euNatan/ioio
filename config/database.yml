@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: clubedoioio
-  username: divida
-  password: <%= ENV['DIVIDA_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
