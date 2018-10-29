@@ -29,14 +29,18 @@
 
       <div class="row">
         <div class="small-16 columns">
-          <% for i in 1..@collection.stock %>
-            <% active = @collection.item.find_by_code(i) %>
-            <% if active %>
-              <%= link_to "<div class=\"line-active\">#{i}</div>".html_safe, active %>
-            <% else %>
-              <div class="line-code"><%= i %></div>
-            <% end %>
+          <% @collection_item.each do |item |%>
+              <%# next unless item.active %>
+              <%= link_to "<div class=\"line-active\">#{item.code}</div>".html_safe, item %>
           <% end %>
+          <%# for i in 1..@collection.stock %>
+            <%# exists = @collection.item.find_by_code(i) %>
+            <%# if exists && exists.status_id == 1  %>
+              <%#= link_to "<div class=\"line-active\">#{i}</div>".html_safe, exists %>
+            <%# else %>
+              <!--div class="line-code"><%#= i %></div-->
+            <%# end %>
+          <%# end %>
         </div>
       </div>
 

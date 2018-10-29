@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(item_params)
-
+    @item.status_id = 2 #status disable
     respond_to do |format|
       if @item.save
 
