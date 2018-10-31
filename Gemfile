@@ -33,6 +33,7 @@ gem "mini_magick"
 #gem 'will_paginate', '>= 3.1'
 gem 'mini_racer'
 gem "figaro"
+gem 'sparkpost_rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
