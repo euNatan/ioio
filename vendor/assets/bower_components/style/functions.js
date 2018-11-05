@@ -30,7 +30,7 @@ $(document).ready(function (){
 /*-----------------------------------------------------------------------------------*/
   $('#main-nav ul').slicknav({
     prependTo:'.mobile-menu',
-    label: '<img src="/assets/icons/burger.png"/>',
+    label: '<img src="http://ioiocapcom.com/assets/icons/burger-f868dc4d63f3d25f8509219750fe55100470194adb707e73a62494c34853ad59.png">',
     //label: 'menu',
     closeOnClick: true
   });
