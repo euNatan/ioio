@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   get 'sobre', to: 'welcome#about'
   get 'contato', to: 'welcome#contact'
+  post 'contato', to: 'welcome#email_sender'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   #devise_scope :user do
