@@ -1,5 +1,5 @@
 class ContactMailer < ApplicationMailer
-  default from: 'contato@ioiocapcom.com'
+  default from: ENV['MAIL_FROM']
 
   def send_proposal
     #ContactMailer.send_proposal(user: "teste").deliver

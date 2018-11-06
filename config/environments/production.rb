@@ -27,7 +27,7 @@ Rails.application.configure do
   config.assets.compile = true
 
   #config.action_mailer.delivery_method = :sparkpost
-
+  config.action_mailer.delivery_method = :smtp
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
