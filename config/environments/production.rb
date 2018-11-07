@@ -26,6 +26,7 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
 
+  config.action_mailer.default_url_options = { host: 'http://ioiocapcom.com', port: 80 }
   #config.action_mailer.delivery_method = :sparkpost
   config.action_mailer.delivery_method = :smtp
   #config.mailer_sender = ENV['MAIL_FROM']
