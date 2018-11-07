@@ -4,7 +4,7 @@
 .lime {
 	color: #f7c408
 }
-
+.white{color:white !important}
 .video-container {
 position: relative;
 padding-bottom: 56.25%;
@@ -34,7 +34,7 @@ height: 100%;
 
 .alert{
 	text-align: center;
-  background-color: red;
+  background-color: #01bc01;
   font-weight: bold;
   font-size: 14pt;
 }

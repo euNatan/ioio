@@ -1,0 +1,53 @@
+<%= render "share/slide" %>
+
+<section id="main-content">
+
+  <div class="row">
+    <div class="small-16 columns">
+      <h1><span class="white">Negociar com</span> <%= @item.user.name %></h1>
+      <div class="big-sep"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-16 large-8 columns">
+      <form id="" action="/trade" method="post">
+        <label>
+          <input type="text" placeholder="Nome" name="name" value="<%= current_user.name if current_user.present? %>">
+        </label>
+
+        <label>
+          <input type="text" placeholder="Email" name="email">
+        </label>
+
+          <input type="text" style="display:none" name="item_id" value="<%= @item.id %>">
+
+        <label>
+          <textarea name="message" rows="8" cols="40" placeholder="O que me conta?"></textarea>
+        </label>
+
+        <button type="submit" class="lime-button" name="submit">Enviar</button>
+      </form>
+      <div id="note"></div>
+    </div>
+    <div class="small-16 large-7 columns addresses">
+      <div class="row small-up-1 medium-up-2">
+        <!--outros items-->
+        <% @item.user.items.each do |item| %>
+        <div class="column">
+          <h5><%=link_to item.collection.name, collection_show_path(id: item.collection.id) %></h5>
+          <address>
+            <p>
+              CODE: <%= item.code %><br>
+              <%=link_to image_tag(item.collection.image.thumb), collection_show_path(id: item.collection.id) %>
+            </p>
+          </address>
+        </div>
+        <% end %>
+        <!--//end outros-->
+
+      </div>
+    </div>
+  </div>
+
+</section>
