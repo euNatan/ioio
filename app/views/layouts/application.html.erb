@@ -41,7 +41,7 @@
                       <%= link_to "Sair", destroy_user_session_path, method: :delete, class:"menulist" %>
 
                     <% else %>
-                      <%= link_to "<i class=\"fa fa-1x fa-facebook-square\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
+                      <%#= link_to "<i class=\"fa fa-1x fa-facebook-square\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
                       <%= link_to "<i class=\"fa fa-1x fa-door-open\"></i></i> Entrar".html_safe, "/users/sign_in", class:"item-button in" %>
                     <% end %>
                   </div>
