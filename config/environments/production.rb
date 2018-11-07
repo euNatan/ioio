@@ -28,6 +28,9 @@ Rails.application.configure do
 
   #config.action_mailer.delivery_method = :sparkpost
   config.action_mailer.delivery_method = :smtp
+  #config.mailer_sender = ENV['MAIL_FROM']
+  config.action_mailer.asset_host = 'http://ioiocapcom.com'
+
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 

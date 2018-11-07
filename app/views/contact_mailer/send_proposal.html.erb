@@ -5,10 +5,10 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <div style="width:150px"><img src="http://localhost:3000/assets/logo-1bcb5fb07f8c4daac45d25178ed4221855a365619a3e620e0b218a5131342b9c.png"></div>
-    <h3>Olá, Poderia ajudar o/a <%= @name %></h3>
+    <div style="width:150px"><%= image_tag attachments['logo.png'].url %></div>
+    <p>Olá, sou <b> <%= @name %></b></p>
     <p>
-      Mensagem: <b><%= @message %></b>
+      Mensagem: <b><%= @message %></b><br>
       Email para resposta: <b> <%= @email %> </b>
     </p>
 

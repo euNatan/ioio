@@ -32,6 +32,7 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   #config.mailer_sender = ENV['MAIL_FROM']
+  config.action_mailer.asset_host = 'http://localhost:3000'
 
   config.action_mailer.perform_caching = false
 

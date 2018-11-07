@@ -32,7 +32,12 @@ height: 100%;
   margin-bottom: 20px;
 }
 
-
+.alert{
+	text-align: center;
+  background-color: red;
+  font-weight: bold;
+  font-size: 14pt;
+}
 
 #new_item{
 	text-align: left;

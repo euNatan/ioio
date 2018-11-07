@@ -15,6 +15,6 @@ class WelcomeController < ApplicationController
 
   def email_sender
     email = ContactMailer.send_proposal(name: params[:name], email: params[:email], message: params[:message]).deliver
-    format.html { redirect_to contact_path, notice: 'Item was successfully created.' }
+     redirect_to "/contato", :alert => "Mensagem enviada com sucesso"
   end
 end
