@@ -16,31 +16,31 @@
       <%= devise_error_messages! %>
 
       <div class="field">
-        <%= f.label :name %><br />
-        <%= f.text_field :name, autofocus: true %>
+        <%= f.label :name, "Nome" %>
+        <%= f.text_field :name, autofocus: true, placeholder:"nome e sobrenome" %>
       </div>
 
       <div class="field">
-        <%= f.label :email %><br />
+        <%= f.label :email %>
         <%= f.email_field :email, autofocus: true %>
       </div>
 
       <div class="field">
-        <%= f.label :password %>
+        <%= f.label :password, "Senha" %>
         <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <em>(<%= @minimum_password_length %> Caracteres no minimo)</em>
         <% end %><br />
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
 
       <div class="field">
-        <%= f.label :password_confirmation %><br />
+        <%= f.label :password_confirmation, "Confirme a senha" %>
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
 
       <div class="field">
-        <%= f.label :image %><br />
-        <%= f.file_field :image, autofocus: true %>
+        <%= f.label :image, "Selecione foto para perfil" %>
+        <%= f.file_field :image, autofocus: true, class:"item-button-select", name:"Selecione" %>
         <%= f.hidden_field :image_cache %>
       </div>
 

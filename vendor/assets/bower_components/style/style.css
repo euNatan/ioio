@@ -149,6 +149,20 @@ height: 100%;
 	width: 200px;
 	padding: 10px 0 5px;
 }
+
+.item-button-select{
+	background-color: #0374d4;
+	font-family: Luckiest Guy, cursive;
+	font-weight: 400;
+	font-style: normal;
+	font-size:13pt;
+	width: 200px;
+	padding: 10px 0 5px;
+	border-radius: 5px;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .15);
+	text-align: center;
+	color: #fff;
+}
 .actions{
 	text-align: center;
 }

@@ -10,6 +10,7 @@ Trestle.resource(:items) do
     column :user_id
     column :status_id
     column :code
+    column :link
     column :descriprion
     column :photos do |img|
       image_tag img
@@ -27,6 +28,7 @@ Trestle.resource(:items) do
     text_field :user_id
     collection_select :status_id, Status.all, :id, :name, { label: "Status" }
     text_field :code
+    text_field :link
     text_field :descriprion
     file_field :image, as: :file, input_html: { multiple: true }
   end

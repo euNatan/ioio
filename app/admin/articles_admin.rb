@@ -8,6 +8,7 @@ Trestle.resource(:articles) do
    table do
      column :title
      column :description
+     column :link
      column :image do |img|
        image_tag img.image.thumb
      end
@@ -20,6 +21,7 @@ Trestle.resource(:articles) do
    form do |article|
      text_field :title
      text_field :description
+     text_field :link
      file_field :image, as: :file, input_html: { multiple: true }
 
      row do
