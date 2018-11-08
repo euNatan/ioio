@@ -119,7 +119,7 @@ height: 100%;
 }
 .ad-google-item{
 	text-align: center;
-    margin-top: 194px;
+    margin-top: 130px;
 }
 .lime-button,
 .gd-button,
@@ -1150,7 +1150,7 @@ a.lime-button:focus {
 		font-weight: 400;
 		line-height: 1.5;
 		color: #fff;
-		background: #302429;
+		background: #333333;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale
 	}
@@ -3223,7 +3223,7 @@ a.lime-button:focus {
 	}
 
 	.fieldset legend {
-		background: #302429;
+		background: #333333;
 		padding: 0 .2rem;
 		margin: 0;
 		margin-left: -.2rem
@@ -3344,8 +3344,8 @@ a.lime-button:focus {
 		color: transparent;
 		border: 0;
 		overflow: visible;
-		border-top: .45rem solid #302429;
-		border-bottom: .45rem solid #302429
+		border-top: .45rem solid #333333;
+		border-bottom: .45rem solid #333333
 	}
 
 	input[type=range]::-ms-thumb {
@@ -3390,7 +3390,7 @@ a.lime-button:focus {
 
 	.accordion-title:hover,
 	.accordion-title:focus {
-		background-color: #302429
+		background-color: #333333
 	}
 
 	.accordion-title:before {
@@ -3820,7 +3820,7 @@ a.lime-button:focus {
 	}
 
 	.dropdown-pane {
-		background-color: #302429;
+		background-color: #333333;
 		border: 1px solid #cacaca;
 		border-radius: 0;
 		display: block;
@@ -4274,7 +4274,7 @@ a.lime-button:focus {
 
 	.off-canvas-content {
 		min-height: 100%;
-		background: #302429;
+		background: #333333;
 		transition: transform .5s ease;
 		backface-visibility: hidden;
 		z-index: 1;
@@ -4763,7 +4763,7 @@ a.lime-button:focus {
 		z-index: 1006;
 		padding: 1rem;
 		border: 2px solid #1c1518;
-		background-color: #302429;
+		background-color: #333333;
 		border-radius: 0;
 		position: relative;
 		top: 100px;
@@ -4998,7 +4998,7 @@ a.lime-button:focus {
 	tbody,
 	tfoot {
 		border: 1px solid #231a1e;
-		background-color: #302429
+		background-color: #333333
 	}
 
 	caption {
@@ -5077,7 +5077,7 @@ a.lime-button:focus {
 	.tabs {
 		margin: 0;
 		list-style-type: none;
-		background: #302429;
+		background: #333333;
 		border: 1px solid #231a1e
 	}
 
@@ -5141,7 +5141,7 @@ a.lime-button:focus {
 	}
 
 	.tabs-content {
-		background: #302429;
+		background: #333333;
 		transition: all .5s ease;
 		border: 1px solid #231a1e;
 		border-top: 0
@@ -5556,13 +5556,13 @@ a.lime-button:focus {
 
 	::-moz-selection {
 		background: #f7c408;
-		color: #302429;
+		color: #333333;
 		text-shadow: none
 	}
 
 	::selection {
 		background: #f7c408;
-		color: #302429;
+		color: #333333;
 		text-shadow: none
 	}
 
@@ -5664,7 +5664,7 @@ a.lime-button:focus {
 
 @media screen and (min-width:66em) {
 	#main-header .logo {
-		margin-top: 1.2rem
+		margin-top: -0.4rem
 	}
 }
 
@@ -5763,7 +5763,7 @@ a.lime-button:focus {
 	position: absolute;
 	top: 75px;
 	left: 0;
-	background: #302429;
+	background: #333333;
 	margin-left: 0;
 	padding: 2rem 0
 }
@@ -5987,7 +5987,7 @@ text-align: center;
 }
 
 #main-content {
-	background: #302429 image-url("backgrounds/bg-body.jpg") no-repeat center top;
+	background: #333333 image-url("backgrounds/bg-body.jpg") no-repeat center top;
   /*text-align: center;*/
 	margin-top: -100px;
 	padding: 10px;
@@ -6064,7 +6064,7 @@ a.read-more:focus {
 }
 
 .notebook header .title {
-	color: #302429;
+	color: #333333;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
 	padding: .46667rem 0 .46667rem 1.33333rem;
 	margin: 0
@@ -6117,7 +6117,7 @@ a.read-more:focus {
 }
 
 .notebook .blog-entries .entry .article-preview p {
-	color: #302429;
+	color: #333333;
 	margin-bottom: 0
 }
 
@@ -6662,7 +6662,7 @@ footer.main-footer p.copyright {
 }
 
 .blog-entries aside ul li a {
-	color: #302429
+	color: #333333
 }
 
 .blog-entries aside ul li a:hover,
@@ -6809,7 +6809,7 @@ address {
 }
 
 .accordion-item.is-active .accordion-title {
-	background: #302429;
+	background: #333333;
 	color: #f7c408
 }
 

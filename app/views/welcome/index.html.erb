@@ -10,7 +10,7 @@
 
           <div class="small-16 large-16 columns mtop30">
             <% Collection.order("RANDOM()").limit(4).each do |c|%>
-              <div class="small-8 large-4 columns medalhome"><%=link_to image_tag(c.image.medal), collection_show_path(id: c.id) %></div>
+              <div class="small-16 large-4 columns medalhome"><%=link_to image_tag(c.image.medal), collection_show_path(id: c.id) %></div>
             <% end %>
 
           </div>
