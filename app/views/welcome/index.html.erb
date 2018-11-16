@@ -8,9 +8,14 @@
           <p> <span><%= banner.description %></span></p>
           <%=link_to "#{banner.button} <span>Seja o maior de todos</span>".html_safe, new_item_path, class:"button cta-button" %>
 
-          <div class="small-16 large-16 columns mtop30">
+          <div class="small-16 large-16 columns">
             <% Collection.order("RANDOM()").limit(4).each do |c|%>
-              <div class="small-16 large-4 columns medalhome"><%=link_to image_tag(c.image.medal), collection_show_path(id: c.id) %></div>
+            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("http://lojamundodosgames.com/ioiocapcom/img/11.jpg"), collection_show_path(id: 9) %></div>
+            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("http://lojamundodosgames.com/ioiocapcom/img/10.jpg"), collection_show_path(id: 8) %></div>
+            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("http://lojamundodosgames.com/ioiocapcom/img/09.jpg"), collection_show_path(id: 7) %></div>
+            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("http://lojamundodosgames.com/ioiocapcom/img/12.jpg"), collection_show_path(id: 4) %></div>
+            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("http://lojamundodosgames.com/ioiocapcom/img/14.jpg"), collection_show_path(id: 6) %></div>
+            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("http://lojamundodosgames.com/ioiocapcom/img/13.jpg"), collection_show_path(id: 5) %></div>
             <% end %>
 
           </div>
@@ -31,7 +36,7 @@
       <article class="about-us-summary">
         <h2><%= @about.title %></h2>
         <p>
-          <%= @about.description[0..600] %>...<%= link_to "Leia mais", "/sobre", class:"read-more" %>
+          <%= @about.description[0..200] %>...<%= link_to "Leia mais", "/sobre", class:"read-more" %>
         </p>
       </article>
     </div>

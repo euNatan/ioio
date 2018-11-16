@@ -119,7 +119,7 @@ height: 100%;
 }
 .ad-google-item{
 	text-align: center;
-    margin-top: 130px;
+    margin-top: 105px;
 }
 .lime-button,
 .gd-button,
@@ -1270,7 +1270,7 @@ a.lime-button:focus {
 		}
 	}
 
-	.column:last-child:not(:first-child),
+	.column:last-child:not(:first-child)
 	.columns:last-child:not(:first-child) {
 		float: right
 	}
@@ -2135,7 +2135,8 @@ a.lime-button:focus {
 			margin-left: 18.75%
 		}
 		.large-5 {
-			width: 31.25%
+			width: 33.33%;
+			margin-top: 10px;
 		}
 		.large-push-5 {
 			position: relative;
@@ -5694,7 +5695,7 @@ a.lime-button:focus {
 }
 
 #main-header #main-nav ul li a {
-	font-size: 1.2rem;
+	font-size: 1rem;
 	text-transform: uppercase;
 	-webkit-transition: all .1s ease-in;
 	-moz-transition: all .1s ease-in;
@@ -5729,7 +5730,7 @@ a.lime-button:focus {
 	}
 	.medalhome img {
 
-	    width: 65%;
+	    /*width: 65%;*/
 	    margin: auto;
 
 	}
@@ -5901,7 +5902,7 @@ a.lime-button:focus {
 	z-index: 500
 }
 
-.item-slider{min-height: 370px !important;}
+.item-slider{min-height: auto !important;}
 
 #home-slider .slick-slide {
 	min-height: 745px;
