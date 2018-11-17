@@ -38,6 +38,7 @@
                       <%= image_tag current_user.image.thumb %> <strong> <%= current_user.name %></strong>!
                       <br>
                       <%= link_to "Configuração", "/users/edit", class:"menulist" %>
+                      <%= link_to "Meus Ioios", "/items", class:"menulist" %>
                       <%= link_to "Sair", destroy_user_session_path, method: :delete, class:"menulist" %>
 
                     <% else %>
@@ -67,7 +68,7 @@
                 <ul class="main-menu">
                   <li><%= link_to "Home", "/" %></li>
                   <li><a href="#menu-toggle2" class="btn btn-secondary hide-on-mobile" id="menu-toggle2">Colecionáveis</a></li>
-                  <li><%= link_to "Onde comprar", "#" %></a></li>	
+                  <li><%= link_to "Onde comprar", "#" %></a></li>
 		  <li><%= link_to "Campeonatos", "#" %></li>
                   <li><%= link_to "Como funciona", "#" %></a></li>
                   <li><%= link_to "Sobre", "/sobre" %></li>

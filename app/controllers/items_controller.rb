@@ -20,6 +20,9 @@ class ItemsController < ApplicationController
 
   # GET /items/1/edit
   def edit
+    if current_user.id != @item.user_id
+      redirect_to "/"
+    end
   end
 
   # POST /items
@@ -27,11 +30,15 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.status_id = 2 #status disable
+
     respond_to do |format|
-      if @item.save
+      if params[:item][:photo_ids].blank?
+        flash[:alert] = 'Por favor selecione as FOTOS.'
+        format.html { render :new }
+      elsif @item.save
 
         Photo.where(id: params[:item][:photo_ids]).update_all(item_id: @item.id)
-        format.html { redirect_to @item, notice: 'Item was successfully created.' }
+        format.html { redirect_to @item, notice: 'IOIO criado com sucesso.' }
         format.json { render :show, status: :created, location: @item }
       else
         format.html { render :new }

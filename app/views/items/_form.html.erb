@@ -20,12 +20,12 @@
 
   <div class="field">
     <%= f.label :code, "N° de Serie do IOIO" %>
-    <%= f.text_area :code %>
+    <%= f.text_field :code, min:"1", max:"5000", maxlength:"4", required:"" %>
   </div>
 
   <div class="field">
     <%= f.label :link, "Video do IOIO" %>
-    <%= f.text_area :link %>
+    <%= f.text_field :link, required:"" %>
   </div>
 
   <div class="field">
@@ -34,7 +34,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :image, "Limite 5 fotos! A Primeira foto tem que ser do ioio junto com RG" %>
+    <%= f.label :image, "Limite 5 fotos! A Primeira foto tem que ser do ioio junto com o N° de serie" %>
     <div id="uploaded_photos"></div>
   </div>
 

@@ -5,7 +5,6 @@
       <div class="row">
         <div class="small-16 columns">
           <h1>Detalhes</h1>
-          <div class="big-sep"></div>
         </div>
       </div>
 
@@ -21,7 +20,7 @@
         </div>
         <div class="small-16 large-7 columns">
           <div class="game-description">
-            <h2><%=link_to image_tag(@item.collection.image.thumb), collection_show_path(id: @item.collection.id) %> <%=link_to @item.collection.name, collection_show_path(id: @item.collection.id) %> #<%= sprintf '%05d', @item.code%></h2>
+            <h2><%=link_to image_tag(@item.collection.image.thumb), collection_show_path(id: @item.collection.id) %> <%=link_to @item.collection.name, collection_show_path(id: @item.collection.id) %> #<%= sprintf '%04d', @item.code%></h2>
             <h5>dono: <span class="username"><%= @item.user.name %></span></h5>
             <p>
               <%= @item.descriprion %>

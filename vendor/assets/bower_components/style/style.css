@@ -34,10 +34,14 @@ height: 100%;
 
 .alert{
 	text-align: center;
-  background-color: #01bc01;
   font-weight: bold;
   font-size: 14pt;
+	position: relative;
+  z-index: 1001;
 }
+.table{font-size: 12px !important;}
+.alert-success{background-color: #01bc01;}
+.alert-danger{background-color: red;}
 
 #new_item{
 	text-align: left;
@@ -98,7 +102,6 @@ height: 100%;
 	padding-top: 5px;
 }
 .client{
-	height: 150px;
 	font-size: 12pt !important;
 	font-family: Luckiest Guy, cursive !important;
 	font-weight: 400 !important;
