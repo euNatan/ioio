@@ -1,22 +1,23 @@
 <section id="home-slider">
   <!--slide -->
   <% Banner.background.each do |banner| %>
-  <div style="background: url('<%= banner.image.banner.url %>')">
+  <!--div style="background: url('<%#= banner.image.banner.url %>')"-->
+  <div> 	
     <div class="row">
       <div class="small-16 columns">
         <div class="cta-text">
-          <p> <span><%= banner.description %></span></p>
+          <!--p> <span><%#= banner.description %></span></p-->
+		<div class="small-16 large-16 columns"><%=link_to image_tag("https://yoyocapcom.com/ioiocapcom/img/01.jpg") %></div>
+	 
           <%=link_to "#{banner.button} <span>Seja o maior de todos</span>".html_safe, new_item_path, class:"button cta-button" %>
 
           <div class="small-16 large-16 columns">
-            <% Collection.order("RANDOM()").limit(4).each do |c|%>
-            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("http://lojamundodosgames.com/ioiocapcom/img/11.jpg"), collection_show_path(id: 9) %></div>
-            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("http://lojamundodosgames.com/ioiocapcom/img/10.jpg"), collection_show_path(id: 8) %></div>
-            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("http://lojamundodosgames.com/ioiocapcom/img/09.jpg"), collection_show_path(id: 7) %></div>
-            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("http://lojamundodosgames.com/ioiocapcom/img/12.jpg"), collection_show_path(id: 4) %></div>
-            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("http://lojamundodosgames.com/ioiocapcom/img/14.jpg"), collection_show_path(id: 6) %></div>
-            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("http://lojamundodosgames.com/ioiocapcom/img/13.jpg"), collection_show_path(id: 5) %></div>
-            <% end %>
+            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("https://yoyocapcom.com/ioiocapcom/img/11.jpg"), collection_show_path(id: 9) %></div>
+            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("https://yoyocapcom.com/ioiocapcom/img/10.jpg"), collection_show_path(id: 8) %></div>
+            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("https://yoyocapcom.com/ioiocapcom/img/09.jpg"), collection_show_path(id: 7) %></div>
+            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("https://yoyocapcom.com/ioiocapcom/img/12.jpg"), collection_show_path(id: 4) %></div>
+            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("https://yoyocapcom.com/ioiocapcom/img/14.jpg"), collection_show_path(id: 6) %></div>
+            <div class="small-16 large-5 columns medalhome"><%=link_to image_tag("https://yoyocapcom.com/ioiocapcom/img/13.jpg"), collection_show_path(id: 5) %></div>
 
           </div>
         </div>

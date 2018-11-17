@@ -7,7 +7,7 @@
         <% if current_user %>
           <%= image_tag current_user.image %> <strong> <%= current_user.name %></strong>!
         <% else %>
-          <%#= link_to "<i class=\"fa fa-1x fa-facebook-square\" aria-hidden=\"true\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
+          <%= link_to "<i class=\"fa fa-1x fa-facebook-square\" aria-hidden=\"true\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
         <% end %>
       </div>
     </h1>
@@ -45,7 +45,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "Cadastrar", class:"item-button" %>
+        <%= f.submit "Cadastrar", class:"item-button item-button-mobile" %>
       </div>
 
     <% end %>

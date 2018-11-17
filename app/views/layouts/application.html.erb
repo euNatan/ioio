@@ -11,19 +11,19 @@
     <%#= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.js" %>
     <%#= javascript_include_tag "http://www.marghoobsuleman.com/mywork/jcomponents/image-dropdown/samples/js/msdropdown/jquery.dd.js" %>
 
-    <link href='http://fonts.googleapis.com/css?family=Luckiest+Guy|Bitter:700|Open+Sans:400,600,600italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Luckiest+Guy|Bitter:700|Open+Sans:400,600,600italic' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
 
-    <div id="fb-root"></div>
+    <!--div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
       js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10&appId=1630181980356039";
       fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));</script-->
 
     <div id="wrapper">
 
@@ -41,7 +41,7 @@
                       <%= link_to "Sair", destroy_user_session_path, method: :delete, class:"menulist" %>
 
                     <% else %>
-                      <%#= link_to "<i class=\"fa fa-1x fa-facebook-square\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
+                      <%= link_to "<i class=\"fa fa-1x fa-facebook-square\"></i> Entrar com Facebook".html_safe, user_facebook_omniauth_authorize_path, class:"facebook-button" %>
                       <%= link_to "<i class=\"fa fa-1x fa-door-open\"></i></i> Entrar".html_safe, "/users/sign_in", class:"item-button in" %>
                     <% end %>
                   </div>
@@ -49,7 +49,7 @@
 
               </div>
                 <h3>Colecionáveis</h3>
-                <% Collection.all.order("updated_at desc").each do |c|%>
+                <% Collection.order("updated_at desc").each do |c|%>
                 <li class="medal"><%= link_to "#{image_tag(c.image.thumb)} #{c.name}".html_safe, collection_show_path(id: c.id) %></li>
                 <%end%>
             </ul>
@@ -62,15 +62,15 @@
             <div class="side-menu small-4-fixed columns hide-on-desk mt25"><a href="#menu-toggle" id="menu-toggle"><%= image_tag "icons/burger.png" %></a></div>
             <div class="row">
               <!--div class="small-4 columns mt25"><a href="#menu-toggle" id="menu-toggle"><img src="assets/icons/burger.svg"/></a></div-->
-              <div class="small-9 large-3 columns logo"><%= link_to(image_tag("logo.png"), '/', style:"width:75%") %></a></div>
+              <div class="small-9 large-3 columns logo"><%= link_to(image_tag("logo.png", style:"width:75%"), '/') %></a></div>
               <nav id="main-nav" class="small-19 large-13 columns">
                 <ul class="main-menu">
                   <li><%= link_to "Home", "/" %></li>
                   <li><a href="#menu-toggle2" class="btn btn-secondary hide-on-mobile" id="menu-toggle2">Colecionáveis</a></li>
-                  <li><%= link_to "Campeonatos", "#" %></li>
+                  <li><%= link_to "Onde comprar", "#" %></a></li>	
+		  <li><%= link_to "Campeonatos", "#" %></li>
                   <li><%= link_to "Como funciona", "#" %></a></li>
                   <li><%= link_to "Sobre", "/sobre" %></li>
-                  <li><%= link_to "Onde comprar", "#" %></a></li>
                   <li><%= link_to "Contato", "/contato" %></li>
                 </ul>
                 <ul class="mobile-menu"></ul>
@@ -116,14 +116,13 @@
               <!--//social-icons-->
               <!--logo-->
               <div class="small-16 medium-4 columns">
-                <a href="#"><img src="assets/images/logo_footer.png" alt="" class="footer-logo"/></a>
+                <a href="/"><%= image_tag "logo_footer.png", alt:"", class:"footer-logo"%></a>
               </div>
               <!--//logo-->
               <!--copyright-->
               <div class="small-16 medium-6 columns">
                 <p class="copyright">
-                    <%= link_to "-", user_facebook_omniauth_authorize_path %>
-                  Copyright &copy; euNatan <span class="date"></span>. All Rights Reserved.
+                  Copyright &copy; Capcom <span class="date"></span>. All Rights Reserved.
                 </p>
               </div>
               <!--//copyright-->
