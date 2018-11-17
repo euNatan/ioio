@@ -30,6 +30,7 @@
 
       <div class="row">
         <div class="small-16 columns">
+          <span class="desc"><h4>Ioios Cadastrados:</h4></span>
           <% @collection_item.each do |item |%>
               <%# next unless item.active %>
               <%= link_to "<div class=\"line-active\">#{item.code}</div>".html_safe, item %>
