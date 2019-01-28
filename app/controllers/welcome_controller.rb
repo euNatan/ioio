@@ -13,6 +13,12 @@ class WelcomeController < ApplicationController
 
   end
 
+  def howtodo
+  end
+
+  def wherebuy
+  end  
+
   def email_sender
     email = ContactMailer.send_proposal(name: params[:name], email: params[:email], message: params[:message]).deliver
      redirect_to "/contato", :alert => "Mensagem enviada com sucesso"

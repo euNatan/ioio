@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get 'sobre', to: 'welcome#about'
   get 'contato', to: 'welcome#contact'
+  get 'como-funciona', to: 'welcome#howtodo'
+  get 'onde-comprar', to: 'welcome#wherebuy'
   post 'contato', to: 'welcome#email_sender'
   post 'trade', to: 'welcome#trade_sender'
   get 'item-trade', to: 'items#trade'
