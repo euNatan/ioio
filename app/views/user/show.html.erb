@@ -17,20 +17,14 @@
           <span class="desc"><h4>Email:</h4></span>
           <p><%= @user.email %></p>
 
-          <span class="desc"><h4>Estoque:</h4></span>
-          <span class="disponiveis">499</span>/12
+          <span class="desc"><h4>Quantidade:</h4></span>
+          <span class="disponiveis"><%= @user.items.size  %></span>
 
         </div>
       </div>
 
       <div class="row game-presentation fontgame">
         <div class="small-16 large-16 columns">
-          <% @user.items.each do |item|%>
-            <div class="small-16 large-4 item-list"><%= link_to "#{image_tag(item.collection.image.thumb)} #{item.collection.name} -  ##{sprintf '%05d', item.code}".html_safe, item %></div>
-          <%end%>
-          <% @user.items.each do |item|%>
-            <div class="small-16 large-4 item-list"><%= link_to "#{image_tag(item.collection.image.thumb)} #{item.collection.name} -  ##{sprintf '%05d', item.code}".html_safe, item %></div>
-          <%end%>
           <% @user.items.each do |item|%>
             <div class="small-16 large-4 item-list"><%= link_to "#{image_tag(item.collection.image.thumb)} #{item.collection.name} -  ##{sprintf '%05d', item.code}".html_safe, item %></div>
           <%end%>

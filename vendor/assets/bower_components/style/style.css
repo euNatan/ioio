@@ -222,6 +222,12 @@ span.amp {
 	background-size: cover!important
 }
 
+#home-slider .slick-slide .columns{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+
 .inline-list {
 	margin: 0;
 	text-align: left
@@ -5911,9 +5917,9 @@ a.lime-button:focus {
 .item-slider{min-height: auto !important; padding-bottom:17px !important;}
 
 #home-slider .slick-slide {
-	background-color: #eee;
+	background-color: #140d10;
 	min-height: 745px;
-	padding-bottom:190px;
+	padding-bottom:140px;
 	background-position: center center!important;
 	background-repeat: no-repeat!important
 }
@@ -5983,7 +5989,7 @@ text-align: center;
 
 .content-top {
 	/*background: image-url("backgrounds/bg-body-top.png") repeat-x center top;*/
-	height: 52px;
+	height: 0px;
 	margin-top: -45;
 	position: relative;
 	z-index: 1000
