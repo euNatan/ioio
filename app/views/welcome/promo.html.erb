@@ -1,0 +1,72 @@
+<%= render "share/slide" %>
+
+<section id="main-content">
+
+  <div class="row">
+    <div class="small-16 columns">
+      <h1>Promoção</h1>
+      <div class="big-sep"></div>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="small-16 large-8 columns">
+      <p>
+        Promoção eu tenho vc não tem! <br><br>
+
+Para ganhar um Ioiô Capcom modelo Flowpack e muito fácil.
+Basta postar um vídeo nas redes sociais com pelo menos um Ioiô Capcom na mão e dizendo a frase ( Eu tenho vc não tem ) no mínimo 4 vezes e pronto vc já está participando da promoção. Se esse video chegar em pelo menos 100 visualizações e estiver seguindo todos os critérios da promoção, vc acaba de ganhar um Ioiô Capcom.
+<br><br>
+Critério da promoção:
+Seu vídeo precisa ter no maximo 45 segundos de duração ou mínimo de 20 segundos, e contendo na descrição as #eutenhovcnaotem #ioiocapcom #capcom.
+<br><br>
+O video deve ser gravado em HD não pode estar com a imagem tremendo nem escura e áudio baixo se estiver assim seu vídeo não será aceito.Esse é o mínimo de qualidade exigido.
+<br><br>
+Caso seu vídeo fique bem produzido e criativo vamos divulgar em nossas redes sociais, e vc vai ganhar mais um ioiô, modelo luxo capcom.
+<br><br>
+Promoção válida por 30 dias podendo se estender por mais 90 dias.
+Início da promoção 05/02/2018
+Ou quando durar o estoque de 10.000 unidades de Ioiôs Flowpack
+<br><br>
+Caso vc ganhe um ioiô Capcom o prazo de envio do ioiô e no máximo 5 dias úteis após pagamento do frete.
+Valor único de R$ 9.90 para todo Brasil.
+<br><br>
+Após o envio do vídeo ( link ) demora em média 07 dias úteis para validação, chegando uma msg em seu email.
+<br><br>
+Junto com esse email chegará um link de pagamento do frete no valor de R$ 9.90 após a confirmação do pagamento e a escolha do Ioiô preferido, estaremos enviando em um prazo máximo de 5 dias úteis seu Ioiô Capcom.
+<br><br>
+      </p>
+    </div>
+
+    <div class="small-16 large-8 columns">
+      <form id="" action="/promocao" method="post">
+        <label>
+          <input type="text" placeholder="Nome" name="name" value="<%= current_user.name if current_user.present? %>">
+        </label>
+
+        <label>
+          <input type="text" placeholder="Email" name="email">
+        </label>
+
+        <label>
+          <input name="whats" type="text" placeholder="whatsapp para contato">
+        </label>
+
+        <label>
+          <input name="message" type="text" placeholder="Link do video no youtube">
+        </label>
+
+        <button type="submit" class="lime-button" name="submit">Enviar</button>
+      </form>
+      <div id="note"></div>
+    </div>
+    <div class="small-16 large-7 columns addresses">
+      <div class="row small-up-1 medium-up-2">
+        <!--address-->
+        <!--//address-->
+      </div>
+    </div>
+  </div>
+
+</section>

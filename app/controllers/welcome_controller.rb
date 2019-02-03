@@ -17,7 +17,15 @@ class WelcomeController < ApplicationController
   end
 
   def wherebuy
-  end  
+  end
+
+  def promo
+  end
+
+  def promocao
+    email = PromocaoMailer.send_proposal(name: params[:name], email: params[:email], whatssapp: params[:whats], message: params[:message]).deliver
+     redirect_to "/promo", :alert => "Mensagem enviada com sucesso"
+  end
 
   def email_sender
     email = ContactMailer.send_proposal(name: params[:name], email: params[:email], message: params[:message]).deliver

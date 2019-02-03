@@ -6,6 +6,6 @@ class ContactMailer < ApplicationMailer
     @email = email
     @message = message
     attachments.inline["logo.png"] = File.read("#{Rails.root}/app/assets/images/logo.png")
-    mail(to: "natanf.ti@gmail.com", subject: 'Contato IoioCAPCOM')
+    mail(to: "ioiocapcom@gmail.com", subject: 'Contato IoioCAPCOM')
   end
 end

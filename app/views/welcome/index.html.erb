@@ -2,13 +2,13 @@
   <!--slide -->
   <% Banner.background.each do |banner| %>
   <!--div style="background: url('<%#= banner.image.banner.url %>')"-->
-  <div> 	
+  <div>
     <div class="row">
       <div class="small-16 columns">
         <div class="cta-text">
           <!--p> <span><%#= banner.description %></span></p-->
 		<div class="small-16 large-16 columns"><%=link_to image_tag("https://ioiocapcom.com/ioiocapcom/img/0001.jpg") %></div>
-	 
+	        <%=link_to "Promoção Eu tenho você nao tem!!".html_safe, "/promo", class:"button promo cta-button" %> 
           <%=link_to "#{banner.button} <span>Seja o maior de todos</span>".html_safe, new_item_path, class:"button cta-button" %>
 
           <div class="small-16 large-16 columns">

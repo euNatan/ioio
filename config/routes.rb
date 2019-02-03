@@ -19,8 +19,10 @@ Rails.application.routes.draw do
   get 'como-funciona', to: 'welcome#howtodo'
   get 'onde-comprar', to: 'welcome#wherebuy'
   post 'contato', to: 'welcome#email_sender'
+  post 'promocao', to: 'welcome#promocao'
   post 'trade', to: 'welcome#trade_sender'
   get 'item-trade', to: 'items#trade'
+  get 'promo', to: 'welcome#promo'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   #devise_scope :user do
