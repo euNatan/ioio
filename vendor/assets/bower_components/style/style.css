@@ -250,6 +250,9 @@ span.amp {
 	text-align: center !important;
 	font-size: rem-calc(23) !important;
 }
+#home-slider .promo b{
+	font-size: 19px !important;
+}
 .lime-button,
 .gd-button,
 .item-button,
